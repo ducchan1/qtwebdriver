@@ -20,6 +20,7 @@
     'QT_CORE_LIB',
     'QT_SHARED',
     'QT_NO_OPENGL',
+    '_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS',
   ],
 
   'conditions': [ 
@@ -93,7 +94,8 @@
 
       'msvs_settings': {
         'VCCLCompilerTool': {
-          'TreatWChar_tAsBuiltInType': 'false',
+          'TreatWChar_tAsBuiltInType': 'true',
+          'AdditionalOptions': '/std:c++14',
         },
       },
 
